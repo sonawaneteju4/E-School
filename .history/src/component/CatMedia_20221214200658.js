@@ -1,0 +1,18 @@
+import React from 'react'
+
+const CatMedia = ({filterItems, catItems}) => {
+  return (
+    <>
+      <div className="p-2 m-2 text-center">
+      {
+      catItems.map((curClem) => {
+          return 
+          <button type="button" class="btn btn-outline-dark m-1" onClick={() => filterItems(curClem)}>{curClem}</button>
+      })}
+        {/* <button type="button" class="btn btn-outline-dark m-1" onClick={() => setItems(Data)}>All</button> */}
+      </div>
+    </>
+  )
+}
+
+export default CatMedia
