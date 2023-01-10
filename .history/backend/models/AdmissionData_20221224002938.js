@@ -1,0 +1,41 @@
+const mongoose = require('mongoose');
+const {Schema} = mongoose
+const AdmissionDataSchema = new Schema({
+    name :{
+        type : String,
+        required : true
+    },
+    email :{
+        type : String,
+        required : true,
+    },
+    phone :{
+        type : String,
+        required : true,
+    },
+    gender :{
+        type : String,
+        required : true,
+    },
+    education  :{
+        type : String,
+        required : true,
+    },
+    status  :{
+        subject  :{
+            type : String,
+            required : true,
+        },
+        type : String,
+        default : "Pending",
+    },
+    Date :{
+        type : Date,
+        default: Date.now
+    }
+
+
+
+})
+
+module.exports = mongoose.model('admissionData', AdmissionDataSchema)
